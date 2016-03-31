@@ -150,6 +150,22 @@ write_beat()
 write_break_500()
 write_beat()
 
+for i in range(0,212):
+	motor1.write("0,")
+	motor2.write("0,")
+	motor3.write("0,")
+	motor4.write("0,")
+
+for i in np.linspace(0,1,183):
+	write_lerp(i)
+
+for i in range(0,112):
+	write_lerp(1)
+
+for i in np.linspace(1,0,86):
+	write_lerp(i)
+
+
 for i in range(0,15):
 	write_break_300()
 	write_beat()
